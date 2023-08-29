@@ -8,7 +8,6 @@
 // Challenge: this time implement it using React. The idea is to map the data
 // structure to a nested HTML list.
 
-// Implementation 1 - using a nested array structure
 const menu = [
   {
     name: "Almoço",
@@ -48,25 +47,29 @@ const menu = [
   }
 ];
 
-const flatMenu = [
-  {name: "Almoço"},
-  {name: "Vegano"},
-  {name: "Salada Ceaser"},
-  {name: "Salada do Verão"},
-  {name: "Salada de Azeitonas"},
-  {name: "Salada de Folhas"},
-  {name: "Carnívoro"},
-  {name: "T-Bone Steak"},
-  {name: "Bife Acebolado"},
-  {name: "Smack Burger"},
-  {name: "Tonkatsu"},
-  {name: "Janta"},
-  {name: "Leve"},
-  {name: "Pesado"}
-]
+const createMenu = (menu) => {
+    return menu.map(({ name, children }, idx) => {
+        
+        return (
+            <>
+                <li key={idx}>{name}</li>
+                
+                {children && (
+                    <ul>
+                        {createMenu(children)}
+                    </ul>
+                )}
+            </>
+        )
+    })
+}
+
+const RootMenu = () => (
+    <ul>
+        {createMenu(menu)}
+    </ul>
+)
 
 export default function Tree() {
-    return (
-        OIN
-    );
-};
+    return <RootMenu />
+}
