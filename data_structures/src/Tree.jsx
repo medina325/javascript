@@ -1,4 +1,4 @@
-// Trees are nested data structures, where elements 
+// Trees are nested data structures, where elements
 // (nodes, edges, parents, etc.) can have many
 //  children, and children only have one parent.
 
@@ -24,52 +24,46 @@ const menu = [
       {
         name: "Carnívoro",
         children: [
-          {name: "T-Bone Steak",  children: [{name: "Well Done"}, {name: "Bloody"}]},
+          {
+            name: "T-Bone Steak",
+            children: [{name: "Well Done"}, {name: "Bloody"}],
+          },
           {name: "Bife Acebolado"},
           {name: "Smack Burger"},
           {name: "Tonkatsu"},
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   {
     name: "Janta",
     children: [
       {
         name: "Leve",
-        children: [{name: "Prensadão"}]
+        children: [{name: "Prensadão"}],
       },
       {
         name: "Pesado",
-        children: [{name: "Mexido"}]
-      }
-    ]
-  }
+        children: [{name: "Mexido"}],
+      },
+    ],
+  },
 ];
 
 const createMenu = (menu) => {
-    return menu.map(({ name, children }, idx) => {
-        
-        return (
-            <>
-                <li key={idx}>{name}</li>
-                
-                {children && (
-                    <ul>
-                        {createMenu(children)}
-                    </ul>
-                )}
-            </>
-        )
-    })
-}
+  return menu.map(({name, children}, idx) => {
+    return (
+      <>
+        <li key={idx}>{name}</li>
 
-const RootMenu = () => (
-    <ul>
-        {createMenu(menu)}
-    </ul>
-)
+        {children && <ul>{createMenu(children)}</ul>}
+      </>
+    );
+  });
+};
+
+const RootMenu = () => <ul>{createMenu(menu)}</ul>;
 
 export default function Tree() {
-    return <RootMenu />
+  return <RootMenu />;
 }
