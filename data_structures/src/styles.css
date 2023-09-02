@@ -1,3 +1,7 @@
+:root {
+    --border-default-color: rgb(255, 244, 210);
+}
+
 /* App.jsx -------------------------------------- */
 .container {
     display: flex;
@@ -6,7 +10,7 @@
 }
 
 .example {
-    border: 1px solid rgb(255, 244, 210);
+    border: 1px solid var(--border-default-color);
     padding: 1rem;
     width: 25%;
 }
@@ -18,7 +22,7 @@
     min-height: 2rem;
     padding: var(--padding);
     margin-bottom: 1rem;
-    border: 1px solid rgb(255, 244, 210);
+    border: 1px solid var(--border-default-color);
 }
 
 .message__text {
@@ -30,4 +34,9 @@
     right: var(--padding);
     bottom: var(--padding);
 }
-/* Map.jsx -------------------------------------- */
+/* Notification.jsx -------------------------------------- */
+.notification {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-default-color);
+}
