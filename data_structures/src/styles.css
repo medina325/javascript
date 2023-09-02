@@ -1,0 +1,33 @@
+/* App.jsx -------------------------------------- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.example {
+    border: 1px solid rgb(255, 244, 210);
+    padding: 1rem;
+    width: 25%;
+}
+
+/* Message.jsx -------------------------------------- */
+.message {
+    --padding: 1rem;
+    position: relative;
+    min-height: 2rem;
+    padding: var(--padding);
+    margin-bottom: 1rem;
+    border: 1px solid rgb(255, 244, 210);
+}
+
+.message__text {
+    position: absolute;
+}
+
+.message__user {
+    position: absolute;
+    right: var(--padding);
+    bottom: var(--padding);
+}
+/* Map.jsx -------------------------------------- */
