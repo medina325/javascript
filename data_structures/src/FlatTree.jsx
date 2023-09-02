@@ -24,10 +24,10 @@ const MenuItem = ({id, items}) => {
 
   if (item.children) {
     return (
-      <>
-        <li>{item.name}</li>
+      <li>
+        {item.name}
         <NestedMenu key={id} ids={item.children} items={items} />
-      </>
+      </li>
     );
   }
 
