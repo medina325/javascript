@@ -50,19 +50,20 @@ const menu = [
   },
 ];
 
-const createMenu = (menu) => {
-  return menu.map(({name, children}, idx) => {
-    return (
-      <>
-        <li key={idx}>{name}</li>
-
-        {children && <ul>{createMenu(children)}</ul>}
-      </>
-    );
-  });
+const NestedMenu = ({menu}) => {
+  return (
+    <ul>
+      {menu.map(({name, children}, idx) => (
+        <li key={idx}>
+          {name}
+          {children && <NestedMenu menu={children} />}
+        </li>
+      ))}
+    </ul>
+  );
 };
 
-const RootMenu = () => <ul>{createMenu(menu)}</ul>;
+const RootMenu = () => <NestedMenu menu={menu} />;
 
 export default function Tree() {
   return <RootMenu />;
