@@ -33,16 +33,16 @@ export default function SetExample() {
   return (
     <table>
       <tbody>
-        {options.map((option) => (
-          <tr key={option.id}>
+        {options.map(({id, name}) => (
+          <tr key={id}>
             <td>
               <input
                 type="checkbox"
-                checked={selectedOptions.has(option.id)}
-                onChange={() => handleOnChange(option.id)}
+                checked={selectedOptions.has(id)}
+                onChange={() => handleOnChange(id)}
               />
             </td>
-            <td>{option.name}</td>
+            <td>{name}</td>
           </tr>
         ))}
       </tbody>
