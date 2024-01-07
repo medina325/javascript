@@ -1,5 +1,7 @@
 :root {
     --border-default-color: rgb(255, 244, 210);
+    background-color: rgb(41, 41, 41);
+    color: rgb(241, 241, 241);
 }
 
 /* App.jsx -------------------------------------- */
