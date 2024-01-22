@@ -1,4 +1,4 @@
-export default function Example({name, component}) {
+export default function Example({ name, component }) {
   return (
     <div className="example">
       <h3>{name}</h3>

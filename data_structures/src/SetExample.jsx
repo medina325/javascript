@@ -1,16 +1,16 @@
-import {useState} from "react";
+import { useState } from "react";
 
 const options = [
-  {id: 1, name: "Ice Cream"},
-  {id: 2, name: "Cake"},
-  {id: 3, name: "Brownie"},
-  {id: 4, name: "Cheesecake"},
-  {id: 5, name: "Cookie"},
-  {id: 6, name: "Pudding"},
-  {id: 7, name: "Donut"},
-  {id: 8, name: "Cupcake"},
-  {id: 9, name: "Fruit Tart"},
-  {id: 10, name: "Macaron"},
+  { id: 1, name: "Ice Cream" },
+  { id: 2, name: "Cake" },
+  { id: 3, name: "Brownie" },
+  { id: 4, name: "Cheesecake" },
+  { id: 5, name: "Cookie" },
+  { id: 6, name: "Pudding" },
+  { id: 7, name: "Donut" },
+  { id: 8, name: "Cupcake" },
+  { id: 9, name: "Fruit Tart" },
+  { id: 10, name: "Macaron" },
 ];
 
 export default function SetExample() {
@@ -33,7 +33,7 @@ export default function SetExample() {
   return (
     <table>
       <tbody>
-        {options.map(({id, name}) => (
+        {options.map(({ id, name }) => (
           <tr key={id}>
             <td>
               <input
