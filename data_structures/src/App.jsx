@@ -4,6 +4,7 @@ import MapExample from "./MapExample.jsx";
 import NaiveMap from "./NaiveMap.jsx";
 import Queue from "./Queue.jsx";
 import SetExample from "./SetExample.jsx";
+import Stack from "./Stack.jsx";
 import Tree from "./Tree.jsx";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <Example name="Map" component={<MapExample />} />
       <Example name="Set" component={<SetExample />} />
       <Example name="Queue" component={<Queue />} />
+      <Example name="Stack" component={<Stack />} />
     </div>
   );
 }

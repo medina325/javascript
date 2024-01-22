@@ -16,6 +16,21 @@
     padding: 1rem;
     width: 25%;
 }
+/* Stack.jsx -------------------------------------- */
+.stack-container {
+    display: flex;
+    justify-content: center;
+}
+
+.undo-btn {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.undo-btn:hover {
+    cursor: pointer;
+    border: 1px solid red;
+}
 
 /* Message.jsx -------------------------------------- */
 .message {
@@ -35,6 +50,23 @@
     position: absolute;
     right: var(--padding);
     bottom: var(--padding);
+}
+/* MessageDelete.jsx -------------------------------------- */
+.message-delete {
+    --padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* position: relative; */
+    /* min-height: 2rem; */
+    padding: var(--padding);
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-default-color);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
 }
 /* Notification.jsx -------------------------------------- */
 .notification {
